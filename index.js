@@ -6,7 +6,7 @@ const { color } = require('./js/color.js')
 
 mainrouter = require('./routes/main'),
 
-var app = express()
+const app = express()
 app.enable('trust proxy');
 app.set("json spaces",2)
 app.use(cors())
