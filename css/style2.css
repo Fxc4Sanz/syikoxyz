@@ -165,7 +165,7 @@ section .title::after{
 /* home section styling */
 .home{
     display: flex;
-    background: url("https://f.top4top.io/p_2225v6ml60.jpg") no-repeat center;
+    background-image: url("https://i.top4top.io/p_22225pqmf0.jpg") no-repeat center;
     height: 100vh;
     color: #fff;
     min-height: 500px;
