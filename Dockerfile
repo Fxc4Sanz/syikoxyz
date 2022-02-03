@@ -1,11 +1,23 @@
-FROM buildkite/puppeeter:latest
 
-RUN apt-get update
-RUN apt-get upgrade -y
-RUN apt-get install nodejs -y
+FROM nikolaik/python-nodejs:latest
 
-WORKDIR /app
-COPY . /app
+RUN apt update -y
+RUN apt upgrade -y
+RUN apt-get install -y --no-install-recommends \
+  neofetch \
+  ffmpeg \
+  wget \
+  sudo \
+  tesseract-ocr \
+  chromium \
+  imagemagick
+RUN pip install pillow
+
+RUN npm install -g npm@latest
+RUN npm install -g forever@latest
+
+WORKDIR /home/frmdev/frmdev
+COPY package.json .
 RUN npm install
+COPY . .
 CMD ["npm", "start"]
-EXPOSE 8080
