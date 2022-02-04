@@ -1,1 +1,0 @@
-#syikoxyz.github.io
